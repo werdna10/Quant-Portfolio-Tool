@@ -28,7 +28,9 @@ We are using poetry to track our dependencies, which will make all our lives eas
 
 For Linux, macOs, or WSL do the following:
 
-> pip install curl -sSl <https://install.python-poetry.org>
+> curl -sSl <https://install.python-poetry.org> | python3 -
+
+You will need to add this to your PATH. Type `vim .bashrc` and add the command referenced to the end of the file. You will notice that you can't use your move and that you can't type anythong. Press `i` to enter `insert mode`. Navigate to the end of the file and add the command referenced after the `poetry` install. Note that you are currently in the infamous `vim`, where a lot of people get stuck and cannot leave. When you're done, hit `esc` to exit `insert` mode, then `:` followed by `wq` and `enter` (in that order). Great, now you have successfully entered and exited `vim`. Now, restart your terminal (close and reopen) and proceed.
 
 If you are using Windows Powershell, follow this [link](https://python-poetry.org/docs/#installing-with-the-official-installer) to get the instructions
 
@@ -49,6 +51,11 @@ You may have noticed that we used `poetry` to install our dependency instead of 
 > pre-commit install
 
 There is a `.precommit-config.yaml` that specifies some interesting tasks that must be done (automatically) before commiting your code. These ensure that your code is bug free and conforms to the PEP8 standard. It also gives you a `coverage` summary, which shows you how much of your code is tested. Since this is early days, we are aiming for a **\>90%** coverage percentage.
+
+**For Mac users:** if the command above doesn't work and gives you a "command not found error", run the following commands then rerun `pre-commit install`
+
+> brew install pre-commit
+> poetry update package
 
 As a quick example, run the following command
 
