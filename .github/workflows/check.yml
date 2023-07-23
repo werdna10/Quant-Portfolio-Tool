@@ -30,8 +30,16 @@ jobs:
       uses: actions/cache@v1.2.1
       with:
         repo-token: ${{ secrets.GITHUB_TOKEN }}
-        issue-message: "# Thanks for the `issue`! We look forward to resolving it very soon!"
-        pr-message: "This is your `first` PR! You shoud be extremely proud!! This is definitely the first of many. We look forward to reviewing your code :)"
+        issue-message: |
+          # Thanks for the `issue`! 
+          
+          If this is a bug report, please include relevant logs to help us debug the problem.
+          
+          We look forward to resolving it very soon!
+        pr-message: | 
+          This is your `first` PR! You shoud be extremely proud!! This is definitely the first of many. Thanks a lot for your contribution!
+          
+          We look forward to reviewing your code :)
 
 
   
