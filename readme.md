@@ -6,7 +6,7 @@ The idea behind this project is to create a self-sustaining framework for managi
 
 1. Anthony Givans
 
-> Rising Junior, studying Math and CS with a minor in Astrophysics. Does Computer Vision Research and is really interested in applying Neural Nets to modern day problems. Currently working on making a Math and Physics LLM that takes a Math (or Physics) prompt an provides a step-by-step appraoch to solving the question. Also worked at Google (Summer 2023).
+> Rising Junior, studying Math and CS with a minor in Astrophysics. Does Computer Vision Research and is really interested in applying Neural Nets to modern day problems. Currently working on making a Math and Physics LLM that takes a Math (or Physics) question and provides a step-by-step appraoch to solving said question. Also worked at Google (Summer 2023)
 
 ## How to Contribute
 
