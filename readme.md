@@ -16,7 +16,7 @@ Note: these instructions assume a working knowledge of `git` and `github` and th
 
 > Look at the top right-hand corner of the page. You should see the option to `fork` the repo
 
-* You will then clone the forked repo on your machine. You should see a green `code` button on the (`forked`) repo's page. Click that button, then copy the `.git` link that is present. Next, find a folder on your local machine where you are comfortable storing this code. I recommend `Desktop` but if you hae an existing file structure on your machine, feel free to use it. Once you have decided on where you want to store the code, enter the following command in your command prompt (eg, cmd prompt, bash, git bash, ubuntu, etc):
+* You will then clone the forked repo on your machine. You should see a green `code` button on the (`forked`) repo's page. Click that button, then copy the `.git` link that is present. Next, find a folder on your local machine where you are comfortable storing this code. I recommend `Desktop` but if you have an existing file structure on your machine, feel free to use it. Once you have decided on where you want to store the code, enter the following command in your command prompt (eg, cmd prompt, bash, git bash, ubuntu, etc):
 
 > git clone "the link you copied earlier that ended in `.git`"
 

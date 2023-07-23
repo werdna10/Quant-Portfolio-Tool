@@ -28,8 +28,7 @@ class MathFunctions:
         """
         if len(self.numbers) > 0:
             return np.mean(self.numbers)
-        else:
-            return 0
+        return 0
 
     def std(self) -> int or float:
         """
@@ -37,5 +36,4 @@ class MathFunctions:
         """
         if len(self.numbers) > 0:
             return np.std(self.numbers)
-        else:
-            return 0
+        return 0
