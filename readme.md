@@ -30,7 +30,7 @@ For Linux, macOs, or WSL do the following:
 
 > curl -sSl <https://install.python-poetry.org> | python3 -
 
-You will need to add this to your PATH. Type `vim .bashrc` and add the command referenced to the end of the file. You will notice that you can't use your move and that you can't type anythong. Press `i` to enter `insert mode`. Navigate to the end of the file and add the command referenced after the `poetry` install. Note that you are currently in the infamous `vim`, where a lot of people get stuck and cannot leave. When you're done, hit `esc` to exit `insert` mode, then `:` followed by `wq` and `enter` (in that order). Great, now you have successfully entered and exited `vim`. Now, restart your terminal (close and reopen) and proceed.
+You will need to add this to your PATH. Type `vim .bashrc` and add the command referenced to the end of the file. You will notice that you can't use your mouse and that you can't type anything. Press `i` to enter `insert mode`. Navigate to the end of the file and add the command referenced after the `poetry` install. Note that you are currently in the infamous `vim`, where a lot of people get stuck and cannot leave. When you're done, hit `esc` to exit `insert` mode, then `:` followed by `wq` and `enter` (in that order). Great, now you have successfully entered and exited `vim`. Now, restart your terminal (close and reopen) and proceed.
 
 If you are using Windows Powershell, follow this [link](https://python-poetry.org/docs/#installing-with-the-official-installer) to get the instructions
 
@@ -73,6 +73,6 @@ Now, let's talk about how you submit your code. The main branch is locked, meani
 
 This will create a new branch, then switch to that branch, which is great!
 
-After this, commit your changes to the branch and then submit your **PR** (Pull Request) for review.
+After this, commit your changes to the branch and then submit your **PR** (Pull Request) for review. On the right-hand side of the PR page, you will see an option for **Reviewers**, where you can request to assign two people to review your **PR**. Doing this will expedite the time it takes to get approval!
 
 ### GOOD LUCK! :)
