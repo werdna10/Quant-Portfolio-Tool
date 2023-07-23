@@ -77,6 +77,10 @@ Now, let's talk about how you submit your code. The main branch is locked, meani
 
 This will create a new branch, then switch to that branch, which is great!
 
-After this, commit your changes to the branch and then submit your **PR** (Pull Request) for review. On the right-hand side of the PR page, you will see an option for **Reviewers**, where you can request to assign two people to review your **PR**. Doing this will expedite the time it takes to get approved!
+After this, commit your changes to the branch and then submit your **PR** (Pull Request) for review. In order to push your code to your remote branch and **NOT** the `main` branch, use the following command whenever you are pushing code from a new branch for the work time:
+
+> git push --set-upstream origin name_of_branch
+
+On the right-hand side of the PR page, you will see an option for **Reviewers**, where you can request to assign two people to review your **PR**. Doing this will expedite the time it takes to get approved!
 
 ### GOOD LUCK! :)
