@@ -26,10 +26,16 @@ class MathFunctions:
         """
         Returns the mean of the list of numbers
         """
-        return np.mean(self.numbers)
+        if len(self.numbers) > 0:
+            return np.mean(self.numbers)
+        else:
+            return 0
 
     def std(self) -> int or float:
         """
         Returns the standard deviation of the list of numbers
         """
-        return np.std(self.numbers)
+        if len(self.numbers) > 0:
+            return np.std(self.numbers)
+        else:
+            return 0
