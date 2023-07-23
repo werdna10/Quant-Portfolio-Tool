@@ -21,3 +21,4 @@ def test_math_functions_returns_correct_value():
     assert round(test_func.std(), 2) == 1.71
     assert zero_func.sum() == 0
     assert zero_func.mean() == 0
+    assert zero_func.std() == 0
