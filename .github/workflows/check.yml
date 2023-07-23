@@ -38,5 +38,3 @@ jobs:
           This is your `first` PR! You shoud be extremely proud!! This is definitely the first of many. Thanks a lot for your contribution!
           
           We look forward to reviewing your code :)
-    - name: Cache
-      uses: actions/cache@v1.2.1  
