@@ -8,6 +8,9 @@ The idea behind this project is to create a self-sustaining framework for managi
 
 > Rising Junior, studying Math and CS with a minor in Astrophysics. Does Computer Vision Research and is really interested in applying Neural Nets to modern day problems. Currently working on making a Math and Physics LLM that takes a Math (or Physics) question and provides a step-by-step appraoch to solving said question. Also worked at Google (Summer 2023)
 
+2. Yash Patel
+
+> Rising Sophomore, studying Math, CS, and Physics. Doing research on Classifiers, particularly Deep Neural Nets at an REU. Observing Inter/Intra-Class Boundaries in the latent space, and potential applications to evaluate the robustness o a classifier without prior training data or test data. Plan to develop a mock betting simulator, akin to those used for Quantiative Trading interviews, to develop strategy.
 ## How to Contribute
 
 Note: these instructions assume a working knowledge of `git` and `github` and that you also have `git` already installed on your machine
