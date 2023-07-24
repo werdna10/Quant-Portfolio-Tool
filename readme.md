@@ -12,6 +12,7 @@ The idea behind this project is to create a self-sustaining framework for managi
 
     > Rising Sophomore, studying Math, CS, and Physics. Doing research on Classifiers, particularly Deep Neural Nets, at an REU, a NSF Funded Research Fellowship. Observing Inter/Intra-Class Boundaries in the latent space, with potential applications to evaluate the robustness of a classifier without prior training data or test data. Plan to develop a mock betting simulator, akin to those used for Quantiative Trading interviews, to develop strategy.
 
+
 ## How to Contribute
 
 Note: these instructions assume a working knowledge of both `git` and `github` and that you also have `git` already installed on your machine
