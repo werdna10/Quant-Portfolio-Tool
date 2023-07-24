@@ -14,7 +14,7 @@ The idea behind this project is to create a self-sustaining framework for managi
 
 ## How to Contribute
 
-Note: these instructions assume a working knowledge of `git` and `github` and that you also have `git` already installed on your machine
+Note: these instructions assume a working knowledge of both `git` and `github` and that you also have `git` already installed on your machine
 
 * Firstly, `fork` this repository
 
@@ -30,7 +30,7 @@ At this point, you should have seen some output in your terminal and some files 
 
 We are using poetry to track our dependencies, which will make all our lives easier in the long-run. We already took care of this, so run this command in your terminal:
 
-For Linux, macOs, or WSL do the following:
+For Linux, macOS, or WSL do the following:
 
 > curl -sSl <https://install.python-poetry.org> | python3 -
 
@@ -54,7 +54,7 @@ You may have noticed that we used `poetry` to install our dependency instead of 
 
 > pre-commit install
 
-There is a `.precommit-config.yaml` that specifies some interesting tasks that must be done (automatically) before commiting your code. These ensure that your code is bug free and conforms to the PEP8 standard. It also gives you a `coverage` summary, which shows you how much of your code is tested. Since this is early days, we are aiming for a **\>90%** coverage percentage.
+There is a `.precommit-config.yaml` that specifies some interesting tasks that must be done (automatically) before commiting your code. These ensure that your code is bug free and conforms to the PEP8 standard. It also gives you a `coverage` summary, which shows you how much of your code is tested. Since these are early days, we are aiming for a **\>90%** coverage percentage.
 
 **For Mac users:** if the command above doesn't work and gives you a "command not found error", run the following commands then rerun `pre-commit install`
 
@@ -77,6 +77,10 @@ Now, let's talk about how you submit your code. The main branch is locked, meani
 
 This will create a new branch, then switch to that branch, which is great!
 
-After this, commit your changes to the branch and then submit your **PR** (Pull Request) for review. On the right-hand side of the PR page, you will see an option for **Reviewers**, where you can request to assign two people to review your **PR**. Doing this will expedite the time it takes to get approved!
+After this, commit your changes to the branch and then submit your **PR** (Pull Request) for review. In order to push your code to your remote branch and **NOT** the `main` branch, use the following command whenever you are pushing code from a new branch for the work time:
+
+> git push --set-upstream origin name_of_branch
+
+On the right-hand side of the PR page, you will see an option for **Reviewers**, where you can request to assign two people to review your **PR**. Doing this will expedite the time it takes to get approved!
 
 ### GOOD LUCK! :)
