@@ -10,7 +10,8 @@ The idea behind this project is to create a self-sustaining framework for managi
 
 2. Yash Patel
 
-> Rising Sophomore, studying Math, CS, and Physics. Doing research on Classifiers, particularly Deep Neural Nets at an REU. Observing Inter/Intra-Class Boundaries in the latent space, and potential applications to evaluate the robustness o a classifier without prior training data or test data. Plan to develop a mock betting simulator, akin to those used for Quantiative Trading interviews, to develop strategy.
+> Rising Sophomore, studying Math, CS, and Physics. Doing research on Classifiers, particularly Deep Neural Nets, at an REU. Observing Inter/Intra-Class Boundaries in the latent space, and potential applications to evaluate the robustness of a classifier without prior training data or test data. Plan to develop a mock betting simulator, akin to those used for Quantiative Trading interviews, to develop strategy.
+
 ## How to Contribute
 
 Note: these instructions assume a working knowledge of `git` and `github` and that you also have `git` already installed on your machine
