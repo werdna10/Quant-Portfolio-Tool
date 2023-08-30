@@ -67,11 +67,7 @@ def get_sp500_tickers() -> list:
     Returns:
         list: list of S&P 500 tickers.
     """
-    return list(
-        pd.read_html("https://en.wikipedia.org/wiki/List_of_S%26P_500_companies")[
-            0
-        ].Symbol
-    )
+    return list(pd.read_html("https://en.wikipedia.org/wiki/List_of_S%26P_500_companies")[0].Symbol)
 
 
 def extend_ohlc_statistics(data: pd.DataFrame) -> pd.DataFrame:
@@ -101,9 +97,7 @@ def extend_ohlc_statistics(data: pd.DataFrame) -> pd.DataFrame:
 
     # Indicate if instrument is actively traded - rough measure
     data["actively_traded"] = (
-        (data["adj_close_returns"] != np.inf)
-        | (data["adj_close_returns"] != -1.0)
-        | (data["adj_close_returns"] != 0)
+        (data["adj_close_returns"] != np.inf) | (data["adj_close_returns"] != -1.0) | (data["adj_close_returns"] != 0)
     )
 
     # Replace np.inf with np.nan

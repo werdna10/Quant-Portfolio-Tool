@@ -20,9 +20,7 @@ import pandas as pd
 from data import data_utils
 
 DB_DATA = data_utils.load_cache(r"data/sp_500/sp_500_cache.pickle")
-RETURNS_DATA = pd.DataFrame(
-    data_utils.load_cache(r"data/sp_500/adj_close_returns.pickle")
-)
+RETURNS_DATA = pd.DataFrame(data_utils.load_cache(r"data/sp_500/adj_close_returns.pickle"))
 
 # `dir(alpha_functions)` returns all functions within the specified file,
 # afterwich all the alpha functions are filtered out, for the alphas that

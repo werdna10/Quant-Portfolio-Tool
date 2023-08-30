@@ -50,9 +50,7 @@ def main():
         data_utils.cache(data=ohlc_data, path=R3K_CACHE_PATH)
 
         # Cache in cross-universe manner
-        data_utils.cache_cross_universe_statistics(
-            ohlc_data=ohlc_data, path=cross_universe_cache_path
-        )
+        data_utils.cache_cross_universe_statistics(ohlc_data=ohlc_data, path=cross_universe_cache_path)
 
     elif universe == "sp_500":
         # Get list of stock tickers
@@ -73,9 +71,7 @@ def main():
         data_utils.cache(data=ohlc_data, path=SP_500_CACHE_PATH)
 
         # Cache in cross-universe manner
-        data_utils.cache_cross_universe_statistics(
-            ohlc_data=ohlc_data, path=cross_universe_cache_path
-        )
+        data_utils.cache_cross_universe_statistics(ohlc_data=ohlc_data, path=cross_universe_cache_path)
 
 
 if __name__ == "__main__":

@@ -59,9 +59,7 @@ class FormulaicAlphaBuilder(IFormulaicAlpha):
         self._alpha_func = alpha_func
         self.start_date = start_date
         self.vol_target = vol_target
-        self.db_data, self.returns_data = (
-            get_data if get_data is not None else self.get_data()
-        )
+        self.db_data, self.returns_data = get_data if get_data is not None else self.get_data()
         self.ma_pair = (20, 60)
 
         self.raw_signal = pd.DataFrame()
@@ -90,9 +88,7 @@ class FormulaicAlphaBuilder(IFormulaicAlpha):
             print(f"Getting formulaic alpha for {ticker}")
 
             # Update raw alpha signal
-            self.raw_signal = pd.concat(
-                [self.raw_signal, self._alpha_func(tmp_data, ticker)], axis=1
-            ).sort_index()
+            self.raw_signal = pd.concat([self.raw_signal, self._alpha_func(tmp_data, ticker)], axis=1).sort_index()
 
             # Get ex-ante vol (default to 40% annualized vol) -- preferably import from
             # a pre-computed risk model
@@ -100,11 +96,7 @@ class FormulaicAlphaBuilder(IFormulaicAlpha):
             self.ex_ante_vol = pd.concat(
                 [
                     self.ex_ante_vol,
-                    tmp_data["adj_close_returns"]
-                    .rolling(20)
-                    .std()
-                    .rename(ticker)
-                    .fillna(default_vol),
+                    tmp_data["adj_close_returns"].rolling(20).std().rename(ticker).fillna(default_vol),
                 ],
                 axis=1,
             ).sort_index()
@@ -113,9 +105,7 @@ class FormulaicAlphaBuilder(IFormulaicAlpha):
             self.db_data[ticker] = tmp_data
 
         # Get binary votes from alpha singal (here this is long only)
-        self.votes = self.raw_signal.mask(self.raw_signal > 0, 1).mask(
-            self.raw_signal <= 0, 0
-        )
+        self.votes = self.raw_signal.mask(self.raw_signal > 0, 1).mask(self.raw_signal <= 0, 0)
 
         # Get signal conviction -- once you have a multi-strategy system, you can create
         # a signal for each instrument that generates dynamic conviction levels in each
@@ -145,9 +135,7 @@ class FormulaicAlphaBuilder(IFormulaicAlpha):
         self.gnv = np.abs(self.positions).sum(axis=1)
 
         # Summarize outlier positions
-        indices, tickers = np.where(
-            self.positions > self.positions.quantile(0.999).quantile(0.999)
-        )
+        indices, tickers = np.where(self.positions > self.positions.quantile(0.999).quantile(0.999))
         outlier_positions = self.positions.values[indices, tickers]
         outlier_tickers = self.positions.columns[tickers]
         outlier_indices = self.positions.index[indices]
@@ -167,9 +155,7 @@ class FormulaicAlphaBuilder(IFormulaicAlpha):
         self.instrument_level_alpha_model_returns = (
             self.positions * self.returns_data.shift(-1)[self.positions.columns]
         ).iloc[:-1]
-        self.alpha_model_returns = self.instrument_level_alpha_model_returns.sum(
-            axis=1
-        ).rename("alpha_model_returns")
+        self.alpha_model_returns = self.instrument_level_alpha_model_returns.sum(axis=1).rename("alpha_model_returns")
 
         # Number of alpha model views per instrument
         self.n_views = np.abs(self.votes).sum(axis=0).rename("n_views")
@@ -181,20 +167,16 @@ class FormulaicAlphaBuilder(IFormulaicAlpha):
             self.instrument_level_alpha_model_returns.std() * 252**0.5
         ).rename("instrument_level_alpha_model_mean_vol")
         self.volatility_attribution = (
-            self.instrument_level_alpha_model_mean_vol
-            / self.instrument_level_alpha_model_mean_vol.sum()
+            self.instrument_level_alpha_model_mean_vol / self.instrument_level_alpha_model_mean_vol.sum()
         ).rename("volatility_attribution")
 
         # Naive performance attribution (returns should be distributed evenly if the
         # alpha captures diversifying effects)
-        self.instrument_level_alpha_model_mean_return = (
-            self.instrument_level_alpha_model_returns.mean().rename(
-                "instrument_level_alpha_model_mean_return"
-            )
+        self.instrument_level_alpha_model_mean_return = self.instrument_level_alpha_model_returns.mean().rename(
+            "instrument_level_alpha_model_mean_return"
         )
         self.performance_attribution = (
-            self.instrument_level_alpha_model_mean_return
-            / self.instrument_level_alpha_model_mean_return.sum()
+            self.instrument_level_alpha_model_mean_return / self.instrument_level_alpha_model_mean_return.sum()
         ).rename("performance_attribution")
 
         # Scale by square root of the NOBS to capture statistical significance of each
@@ -206,12 +188,10 @@ class FormulaicAlphaBuilder(IFormulaicAlpha):
         ).rename("adjusted_performance_attribution")
 
         # Decompose cumulative gains
-        final_cumulative_returns = (
-            (1 + self.instrument_level_alpha_model_returns).cumprod() - 1
-        ).iloc[-1]
-        self.cumulative_performance_attribution = (
-            final_cumulative_returns / final_cumulative_returns.sum()
-        ).rename("cumulative_performance_attribution")
+        final_cumulative_returns = ((1 + self.instrument_level_alpha_model_returns).cumprod() - 1).iloc[-1]
+        self.cumulative_performance_attribution = (final_cumulative_returns / final_cumulative_returns.sum()).rename(
+            "cumulative_performance_attribution"
+        )
 
     def get_data(self) -> pd.DataFrame:
         """
@@ -220,6 +200,6 @@ class FormulaicAlphaBuilder(IFormulaicAlpha):
         Returns:
             tuple: Database data and stock-level returns.
         """
-        return data_utils.load_cache(
-            r"data/sp_500/sp_500_cache.pickle"
-        ), data_utils.load_cache(r"data/sp_500/adj_close_returns.pickle")
+        return data_utils.load_cache(r"data/sp_500/sp_500_cache.pickle"), data_utils.load_cache(
+            r"data/sp_500/adj_close_returns.pickle"
+        )

@@ -26,8 +26,6 @@ def alpha_01(data: pd.DataFrame, ticker: str) -> pd.DataFrame:
     # Get raw alpha signal
     raw_signal = data[f"ewma({str(ma_pair[0])}_{str(ma_pair[1])})"].rename(ticker)
     # Drop signals on untradeable days
-    drop_signal_indices = (
-        data["actively_traded"].where(data["actively_traded"] == False).dropna().index
-    )
+    drop_signal_indices = data["actively_traded"].where(data["actively_traded"] == False).dropna().index
     raw_signal.loc[drop_signal_indices] = 0
     return raw_signal
