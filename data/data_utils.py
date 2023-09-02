@@ -23,7 +23,6 @@ def dict_to_df(data: dict) -> pd.DataFrame:
     Returns:
         pd.DataFrame: newly converted multi-dimensional object.
     """
-
     return pd.concat(data, axis=0, keys=data.keys())
 
 
@@ -80,7 +79,6 @@ def extend_ohlc_statistics(data: pd.DataFrame) -> pd.DataFrame:
     Returns:
         pd.DataFrame: pre-processed and extended OHLC data.
     """
-
     # Fill missing data by first forward filling,
     # such that [] [] [] a b c [] [] [] becomes [] [] [] a b c c c c
     data.fillna(method="ffill", inplace=True)
@@ -118,7 +116,6 @@ def get_ohlc_data(ticker_list: list) -> dict:
     Returns:
         dict: master dictionary storing each stock's OHLC + returns data.
     """
-
     # Initialize universe dict
     universe_ohlc_data = {}
 
@@ -146,7 +143,6 @@ def get_ohlc_data(ticker_list: list) -> dict:
 
         except Exception as err:
             print(err)
-
     return universe_ohlc_data
 
 
@@ -161,7 +157,6 @@ def cache_cross_universe_statistics(ohlc_data: dict, path: str) -> None:
         ohlc_data (dict): dictionary whose key-value pair = ticker : data.
         path (str): directory path to cache cross-universe statistics.
     """
-
     # Get stock statistics list
     stat_list = ohlc_data[next(iter(ohlc_data))].columns
 

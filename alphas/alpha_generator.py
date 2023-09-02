@@ -29,10 +29,7 @@ alpha_funcs = [func for func in dir(alpha_functions) if func.startswith("alpha")
 alpha_list = list(
     map(
         lambda alpha_func: FormulaicAlphaBuilder(
-            alpha_func=getattr(alpha_functions, alpha_func),
-            start_date="19991231",
-            vol_target=0.2,
-            get_data=(DB_DATA, RETURNS_DATA),
+            alpha_func=getattr(alpha_functions, alpha_func), start_date="19991231", vol_target=0.2
         ),
         alpha_funcs,
     )
