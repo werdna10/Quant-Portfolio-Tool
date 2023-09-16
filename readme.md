@@ -12,9 +12,9 @@ The idea behind this project is to create a self-sustaining framework for managi
 
     > Rising Sophomore, studying Math, CS, and Physics. Doing research on Classifiers, particularly Deep Neural Nets, at an REU, a NSF Funded Research Fellowship. Observing Inter/Intra-Class Boundaries in the latent space, with potential applications to evaluate the robustness of a classifier without prior training data or test data. Plan to develop a mock betting simulator, akin to those used for Quantiative Trading interviews, to develop strategy.
 
-3. Matthew Mione
+4. Matthew Mione
 
-    > Sophomore, studying Math and CS. Interested in doing pure math research in fields of probability theory and mathematical modeling of real-world scenarios. Fun fact about me: I have a cookie monster one-zie, and I like to play piano. You may contact me at <matthewmione@gmail.com> or <mxm194032@miami.edu>. 
+    > Sophomore, studying Math and CS. Interested in doing pure math research in fields of probability theory and mathematical modeling of real-world scenarios. Fun fact about me: I have a cookie monster onesie, and I like to play piano. You may contact me at <matthewmione@gmail.com> or <mxm194032@miami.edu>. 
 
 ## How to Contribute
 
