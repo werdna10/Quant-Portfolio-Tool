@@ -12,6 +12,8 @@ The idea behind this project is to create a self-sustaining framework for managi
 
     > Rising Sophomore, studying Math, CS, and Physics. Doing research on Classifiers, particularly Deep Neural Nets, at an REU, a NSF Funded Research Fellowship. Observing Inter/Intra-Class Boundaries in the latent space, with potential applications to evaluate the robustness of a classifier without prior training data or test data. Plan to develop a mock betting simulator, akin to those used for Quantiative Trading interviews, to develop strategy.
 
+3. Sabian Saliasi
+    > Rising Junior, studying Math and CS. Presently doing research on Machine Learning methods within Quantitative Finance and working as a Software Engineer in a start-up environment as a Machine Learning and Software Engineer at AI Academy, pushing to provide resources in Math, CS, ML, etc, to students from under-represented backgrounds.
 
 ## How to Contribute
 
