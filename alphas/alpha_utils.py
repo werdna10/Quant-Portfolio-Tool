@@ -84,7 +84,7 @@ def kentau_a(data_a: pd.DataFrame, data_b: pd.DataFrame, a: int) -> pd.DataFrame
 def gt(data_a: pd.DataFrame, data_b: pd.DataFrame)-> pd.DataFrame:
     """ Return Boolean Datarame of "a" > "b" """
     try:
-        return a > b
+        return data_a > data_b
     except:
         raise Exception(
             f"data cannot be compared"
