@@ -32,5 +32,3 @@ def alpha_001(data: pd.DataFrame, ticker: str) -> pd.DataFrame:
     drop_signal_indices = data["actively_traded"].where(data["actively_traded"] == False).dropna().index
     raw_signal.loc[drop_signal_indices] = 0
     return raw_signal
-
-
