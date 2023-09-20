@@ -1,6 +1,5 @@
 import pandas as pd
 import numpy as np
-import yfinance as yf
 import scipy
 from scipy import stats
 

@@ -10,9 +10,6 @@ Normal alphas will use the following naming comvention:
 from __future__ import annotations
 
 import pandas as pd
-import numpy as np
-import scipy
-from scipy import stats
 
 
 def alpha_001(data: pd.DataFrame, ticker: str) -> pd.DataFrame:
@@ -24,7 +21,7 @@ def alpha_001(data: pd.DataFrame, ticker: str) -> pd.DataFrame:
     data[f"ewma({str(ma_pair[0])})"] = data["adj_close"].ewm(span=ma_pair[0]).mean()
     data[f"ewma({str(ma_pair[1])})"] = data["adj_close"].ewm(span=ma_pair[1]).mean()
     data[f"ewma({str(ma_pair[0])}_{str(ma_pair[1])})"] = (
-        data[f"ewma({str(ma_pair[0])})"] - data[f"ewma({str(ma_pair[1])})"]
+            data[f"ewma({str(ma_pair[0])})"] - data[f"ewma({str(ma_pair[1])})"]
     )
     # Get raw alpha signal
     raw_signal = data[f"ewma({str(ma_pair[0])}_{str(ma_pair[1])})"].rename(ticker)
